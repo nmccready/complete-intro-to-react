@@ -4,13 +4,9 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import type { RouterHistory } from 'react-router-dom';
-import { object } from 'prop-types';
 import { setSearchTerm } from './actionCreators';
 
 class Landing extends React.Component {
-  static contextTypes = {
-    history: object
-  };
   props: {
     searchTerm: string,
     handleSearchTermChange: Function,
@@ -48,4 +44,6 @@ const mapDispatchToProps = (dispatch: Function) => ({
   }
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(Landing);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps)(Landing);

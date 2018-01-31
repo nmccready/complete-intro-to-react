@@ -9,8 +9,9 @@ import { getAPIDetails } from './actionCreators';
 class Details extends React.Component {
   componentDidMount() {
     if (!this.props.rating) {
-      this.props.getAPIData();
+      return this.props.getAPIData();
     }
+    return undefined;
   }
   props: {
     rating: string,

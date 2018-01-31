@@ -1,15 +1,24 @@
 // @flow
 
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { connect } from 'react-redux';
-import { setSearchTerm } from './actionCreators';
+import React from "react";
+import { Link } from "react-router-dom";
+import { connect } from "react-redux";
+import { setSearchTerm } from "./actionCreators";
 
-const Header = (props: { showSearch?: boolean, handleSearchTermChange: Function, searchTerm: string }) => {
+const Header = (props: {
+  showSearch?: boolean,
+  handleSearchTermChange: Function,
+  searchTerm: string
+}) => {
   let utilSpace;
   if (props.showSearch) {
     utilSpace = (
-      <input type="text" placeholder="Search" value={props.searchTerm} onChange={props.handleSearchTermChange} />
+      <input
+        type="text"
+        placeholder="Search"
+        value={props.searchTerm}
+        onChange={props.handleSearchTermChange}
+      />
     );
   } else {
     utilSpace = (
