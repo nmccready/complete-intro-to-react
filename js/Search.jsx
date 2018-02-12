@@ -4,6 +4,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import ShowCard from './ShowCard';
 import Header from './Header';
+import CrapConnect from './Crap';
 
 const Search = (props: {
   searchTerm: string, // eslint-disable-line react/no-unused-prop-types
@@ -20,6 +21,7 @@ const Search = (props: {
             <ShowCard {...show} key={show.imdbID} id={index} />)
       }
     </div>
+    <CrapConnect />
   </div>
 );
 
